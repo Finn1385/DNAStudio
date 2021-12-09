@@ -17,6 +17,7 @@ body {
   background: radial-gradient(50% 50% at 50% 50%, #0d171f 0%, #213977 0.01%, #0d171f 100%);
 }
 body nav {
+  position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -43,4 +44,58 @@ body nav .links a {
 }
 body nav .links a:hover {
   color: var(--purple);
+}
+body nav span.menu {
+  color: var(--blue);
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  z-index: 11;
+  right: 50px;
+  transition: 0.1s ease opacity;
+}
+
+@media screen and (max-width: 600px) {
+  body nav {
+    justify-content: center;
+  }
+  body nav .links {
+    z-index: 10;
+    position: absolute;
+    right: -100vw;
+    top: 75px;
+    width: 100vw;
+    height: calc(100vh - 75px);
+    background-color: #0d171f;
+    transition: 0.7s right ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body nav .links a {
+    margin: 15px 0;
+    padding: 15px 5%;
+    font-size: 2rem;
+  }
+  body nav span.menu {
+    display: block;
+  }
+  body nav::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100%;
+    background-color: #0d171f;
+    right: -100vw;
+    transition: 0.7s right ease-in-out;
+  }
+  body nav.show::before {
+    right: 0;
+  }
+  body nav.show .links {
+    right: 0;
+  }
 }
