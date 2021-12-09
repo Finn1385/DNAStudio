@@ -1,5 +1,57 @@
+@font-face {
+  font-family: "Digits";
+  src: url("/assets/fonts/Digits.ttf") format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Digits";
+  --purple: #993c87;
+  --blue: #295faf;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #0d171f 0%,
+    #213977 0.01%,
+    #0d171f 100%
+  );
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 0 50px;
+    background-color: rgba($color: #0d171f, $alpha: 0.5);
+    border-bottom: 5px solid var(--blue);
+
+    a.logo {
+      text-decoration: none;
+      img {
+        width: 64px;
+        height: 64px;
+      }
+    }
+
+    .links {
+      a {
+        text-decoration: none;
+        color: var(--blue);
+        margin: 0 25px;
+        transition: 0.3s ease color;
+        font-size: 1.25rem;
+
+        &:hover {
+          color: var(--purple);
+        }
+      }
+    }
+  }
 }
