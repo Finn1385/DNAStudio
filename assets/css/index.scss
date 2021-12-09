@@ -21,9 +21,14 @@ body {
     #213977 0.01%,
     #0d171f 100%
   );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
 
   nav {
     position: fixed;
+    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,14 +36,16 @@ body {
     width: 100%;
     height: 80px;
     padding: 0 50px;
-    background-color: rgba($color: #0d171f, $alpha: 0.5);
+    background-color: rgba($color: #0d171f, $alpha: 0.9);
     border-bottom: 5px solid var(--blue);
 
     a.logo {
-      text-decoration: none;
+      width: 55 * 1.5px;
+      height: 30 * 1.5px;
+
       img {
-        width: 64px;
-        height: 64px;
+        width: 100%;
+        height: 100%;
       }
     }
 
@@ -67,15 +74,60 @@ body {
       transition: 0.1s ease opacity;
     }
   }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0;
+
+    img.logo {
+      width: 55 * 8px;
+      height: 30 * 8px;
+    }
+
+    p {
+      margin: 50px 0;
+      max-width: 75%;
+      padding: 0 50px;
+      text-align: center;
+      color: var(--purple);
+    }
+
+    .social {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 15px;
+        svg {
+          width: 64px;
+          height: 64px;
+          path {
+            fill: var(--blue);
+            transition: 0.3s ease fill;
+          }
+          &:hover path {
+            fill: var(--purple);
+          }
+        }
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 615px) {
   body {
     nav {
       justify-content: center;
 
       .links {
-        // display: none;
         z-index: 10;
         position: absolute;
         right: -100vw;
@@ -120,7 +172,27 @@ body {
         }
       }
     }
+
+    main {
+      img.logo {
+        width: 50%;
+        height: 50%;
+      }
+
+      p {
+        max-width: 90%;
+      }
+
+      .social {
+        a {
+          width: 25%;
+          margin: 25px;
+          svg {
+            width: 96px;
+            height: 96px;
+          }
+        }
+      }
+    }
   }
 }
-
-// 600px

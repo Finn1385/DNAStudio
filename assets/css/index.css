@@ -15,9 +15,14 @@ body {
   width: 100%;
   min-height: 100vh;
   background: radial-gradient(50% 50% at 50% 50%, #0d171f 0%, #213977 0.01%, #0d171f 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
 }
 body nav {
   position: fixed;
+  top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -25,15 +30,16 @@ body nav {
   width: 100%;
   height: 80px;
   padding: 0 50px;
-  background-color: rgba(13, 23, 31, 0.5);
+  background-color: rgba(13, 23, 31, 0.9);
   border-bottom: 5px solid var(--blue);
 }
 body nav a.logo {
-  text-decoration: none;
+  width: 82.5px;
+  height: 45px;
 }
 body nav a.logo img {
-  width: 64px;
-  height: 64px;
+  width: 100%;
+  height: 100%;
 }
 body nav .links a {
   text-decoration: none;
@@ -55,8 +61,50 @@ body nav span.menu {
   right: 50px;
   transition: 0.1s ease opacity;
 }
+body main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px 0;
+}
+body main img.logo {
+  width: 440px;
+  height: 240px;
+}
+body main p {
+  margin: 50px 0;
+  max-width: 75%;
+  padding: 0 50px;
+  text-align: center;
+  color: var(--purple);
+}
+body main .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body main .social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+body main .social a svg {
+  width: 64px;
+  height: 64px;
+}
+body main .social a svg path {
+  fill: var(--blue);
+  transition: 0.3s ease fill;
+}
+body main .social a svg:hover path {
+  fill: var(--purple);
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 615px) {
   body nav {
     justify-content: center;
   }
@@ -97,5 +145,20 @@ body nav span.menu {
   }
   body nav.show .links {
     right: 0;
+  }
+  body main img.logo {
+    width: 50%;
+    height: 50%;
+  }
+  body main p {
+    max-width: 90%;
+  }
+  body main .social a {
+    width: 25%;
+    margin: 25px;
+  }
+  body main .social a svg {
+    width: 96px;
+    height: 96px;
   }
 }
