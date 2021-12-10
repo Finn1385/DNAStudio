@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DNA Studio | News</title>
+    <link rel="stylesheet" href="assets/css/base.min.css" />
+    <link rel="stylesheet" href="assets/css/news.min.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- News page inspired by DaFluffyPotato.com -->
+    <nav>
+      <a href="/" class="logo">
+        <img src="assets/images/logo.svg" alt="DNA Studio logo" />
+      </a>
+      <div class="links">
+        <a href="/news">News</a>
+        <a href="/about">About us</a>
+        <a href="/portfolio" class="special">Portfolio</a>
+      </div>
+      <span class="material-icons menu">menu</span>
+    </nav>
+    <main>
+      <div class="title-row">
+        <h1 class="title">News</h1>
+      </div>
+      <div id="news">
+        <div class="prev hidden" onclick="loadPrevPosts();">
+          <span class="material-icons">refresh</span>Load previous posts
+        </div>
+        <div class="loading">
+          <p>Loading</p>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.3.0/markdown-it.min.js"
+      integrity="sha512-q1tclxbgrDhFhGp/i9mnxITl2FQ3TCfwNj0mZ1r2USwj9WNXBpQ1au4HOBdAq8LXXWFIcsW+5dsdFHyVdk10AQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="assets/js/base.js"></script>
+    <script src="assets/js/news.js"></script>
+  </body>
+</html>
