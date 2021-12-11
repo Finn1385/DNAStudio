@@ -49,6 +49,7 @@ body {
     padding: 0 50px;
     background-color: rgba($color: #0d171f, $alpha: 0.9);
     border-bottom: 5px solid var(--blue);
+    z-index: 10;
 
     a.logo {
       width: 55 * 1.5px;

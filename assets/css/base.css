@@ -42,6 +42,7 @@ body nav {
   padding: 0 50px;
   background-color: rgba(13, 23, 31, 0.9);
   border-bottom: 5px solid var(--blue);
+  z-index: 10;
 }
 body nav a.logo {
   width: 82.5px;
