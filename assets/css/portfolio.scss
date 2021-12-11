@@ -1,0 +1,128 @@
+main {
+  align-self: flex-start;
+  width: 100%;
+  padding: 0 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  h1.title {
+    margin: 25px 0;
+    text-align: center;
+    color: var(--blue);
+    font-size: 2.5rem;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1500px;
+
+    .project {
+      width: 350px;
+      min-height: 350px;
+      max-height: 350px;
+      margin: 0 15px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      color: var(--purple);
+
+      &:hover,
+      &:active {
+        background-color: rgba($color: #295faf, $alpha: 0.25);
+
+        .info {
+          .preview-img {
+            opacity: 0;
+          }
+          p.desc {
+            opacity: 1;
+            color: var(--purple);
+          }
+        }
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .info {
+        position: relative;
+        margin: 15px 0;
+        z-index: 0;
+
+        .preview-img {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          position: absolute;
+          width: 320px;
+          height: 200px;
+          transition: 0.3s ease opacity;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        p.desc {
+          text-align: center;
+          transition: 0.3s ease opacity;
+          opacity: 0;
+        }
+      }
+
+      .links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .link {
+          text-decoration: none;
+          color: var(--purple);
+          width: 68px;
+          height: 68px;
+          padding: 10px;
+          transition: 0.3s ease color;
+
+          &:hover {
+            color: var(--blue);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    padding: 0;
+    h1.title {
+      font-size: 2rem;
+    }
+    .projects {
+      .project {
+        width: 80%;
+        max-height: inherit;
+
+        .links {
+          .link {
+          }
+        }
+      }
+    }
+  }
+}
