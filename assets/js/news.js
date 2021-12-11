@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     maxPage = Math.ceil(getAllPosts()["postFiles"].length / 10);
     page = parseInt(urlParams.get("page"));
     if (isNaN(page)) page = 1;
+    if (page > maxPage) page = maxPage;
     renderPage = page;
     if (renderPage !== 1)
       document.querySelector("#news .prev").classList.remove("hidden");
@@ -63,7 +64,6 @@ function renderAllPosts(currentPage, initial, prev) {
       window.location.href = url;
     });
     if (prev) {
-      console.log("Prev");
       document
         .querySelector("#news")
         .insertBefore(
@@ -72,7 +72,6 @@ function renderAllPosts(currentPage, initial, prev) {
         );
     } else {
       document.querySelector("#news").insertBefore(postEl, loadingEl);
-      console.log("Next");
     }
     if (page === maxPage) loadingEl.classList.add("hidden");
   }
@@ -81,7 +80,6 @@ function renderAllPosts(currentPage, initial, prev) {
 
 function renderFullPost(postId) {
   var post = parsePost(`${postId}.md`);
-  console.log(post);
   document.getElementById("news").remove();
 
   var titleH1 = document.querySelector("main .title-row h1.title");
