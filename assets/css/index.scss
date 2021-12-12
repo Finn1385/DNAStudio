@@ -30,15 +30,16 @@ main {
       justify-content: center;
       align-items: center;
       margin: 15px;
+
       svg {
         width: 64px;
         height: 64px;
-        path {
-          fill: var(--blue);
-          transition: 0.3s ease fill;
-        }
-        &:hover path {
-          fill: var(--purple);
+        color: var(--blue);
+        transition: 0.3s ease;
+
+        &:hover {
+          color: var(--purple);
+          transform: scale(1.1);
         }
       }
     }

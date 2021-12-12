@@ -32,13 +32,12 @@ main .social a {
 main .social a svg {
   width: 64px;
   height: 64px;
+  color: var(--blue);
+  transition: 0.3s ease;
 }
-main .social a svg path {
-  fill: var(--blue);
-  transition: 0.3s ease fill;
-}
-main .social a svg:hover path {
-  fill: var(--purple);
+main .social a svg:hover {
+  color: var(--purple);
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 615px) {
