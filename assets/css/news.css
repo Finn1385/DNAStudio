@@ -66,6 +66,7 @@ main #news .post h2.title {
 main #news .post hr {
   width: 100%;
   border: 1px solid var(--purple);
+  background-color: var(--purple);
   color: var(--purple);
 }
 main #news .post p.date {
