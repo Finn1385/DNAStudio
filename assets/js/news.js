@@ -163,7 +163,11 @@ function getPostData(postFile) {
       post = e.target.responseText;
     }
   };
-  req.open("GET", `/posts/${postFile}`, false);
+  req.open(
+    "GET",
+    `https://raw.githubusercontent.com/Finn1385/DNAStudio/master/posts/${postFile}`,
+    false
+  );
   req.send();
   if (req.status === 404) return null;
   return post;
