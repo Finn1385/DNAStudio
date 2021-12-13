@@ -51,9 +51,10 @@ main .social a svg:hover {
   main .social a {
     width: 25%;
     margin: 25px;
+    padding: 10px;
   }
   main .social a svg {
-    width: 96px;
-    height: 96px;
+    width: 86px;
+    height: 86px;
   }
 }
