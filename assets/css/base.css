@@ -79,7 +79,7 @@ body h1.title {
   font-size: 2.5rem;
 }
 
-@media screen and (max-width: 615px) {
+@media screen and (max-width: 730px) {
   body nav {
     justify-content: center;
   }
