@@ -42,9 +42,27 @@ main {
         align-items: center;
         flex-direction: column;
 
-        img {
-          width: 128px;
-          height: 128px;
+        .img {
+          position: relative;
+          &::before {
+            content: "";
+            width: 85px;
+            height: 85px;
+            background-color: #4c74b1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            filter: blur(50px);
+            position: absolute;
+            z-index: -1;
+            opacity: 1;
+          }
+
+          img {
+            width: 128px;
+            height: 128px;
+          }
         }
 
         h2 {

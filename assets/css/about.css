@@ -40,7 +40,24 @@ main .details section.about .avatar {
   align-items: center;
   flex-direction: column;
 }
-main .details section.about .avatar img {
+main .details section.about .avatar .img {
+  position: relative;
+}
+main .details section.about .avatar .img::before {
+  content: "";
+  width: 85px;
+  height: 85px;
+  background-color: #4c74b1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  filter: blur(50px);
+  position: absolute;
+  z-index: -1;
+  opacity: 1;
+}
+main .details section.about .avatar .img img {
   width: 128px;
   height: 128px;
 }
