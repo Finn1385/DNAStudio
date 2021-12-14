@@ -17,6 +17,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: 25px;
+    position: relative;
 
     h1.title {
       flex: 1;
@@ -30,6 +31,8 @@ main {
       align-items: center;
       display: flex;
       transition: 0.3s ease color;
+      position: absolute;
+      left: 0;
 
       &::after {
         font-family: "Digits";
@@ -193,6 +196,7 @@ main {
       flex-direction: column;
       span {
         margin-bottom: 25px;
+        position: initial;
       }
     }
 

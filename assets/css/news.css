@@ -17,6 +17,7 @@ main .title-row {
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
+  position: relative;
 }
 main .title-row h1.title {
   flex: 1;
@@ -29,6 +30,8 @@ main .title-row span {
   align-items: center;
   display: flex;
   transition: 0.3s ease color;
+  position: absolute;
+  left: 0;
 }
 main .title-row span::after {
   font-family: "Digits";
@@ -194,6 +197,7 @@ main #post a {
   }
   main .title-row span {
     margin-bottom: 25px;
+    position: initial;
   }
   main #post {
     width: 100%;
