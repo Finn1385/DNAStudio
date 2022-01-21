@@ -41,6 +41,7 @@ main .links a:hover, main .links a:focus {
   background-color: rgba(153, 60, 135, 0.01);
 }
 main .social {
+  margin: 0 -50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
