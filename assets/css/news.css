@@ -79,7 +79,7 @@ main #news .post p.date {
   color: var(--purple);
 }
 main #news .post p {
-  text-align: justify;
+  text-align: center;
   width: 100%;
   color: var(--blue);
 }
