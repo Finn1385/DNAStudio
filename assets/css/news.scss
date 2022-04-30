@@ -33,6 +33,7 @@ main {
       transition: 0.3s ease color;
       position: absolute;
       left: 0;
+      cursor: pointer;
 
       &::after {
         font-family: "Digits";
